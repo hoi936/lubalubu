@@ -1,0 +1,108 @@
+:root {
+    --background-color: #2C2C2C;
+    --card-background: #FFFFFF;
+    --box-shadow-hover: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --font-primary: Poppins, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 24px;
+    font-family: var(--font-primary);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: var(--card-background);
+    cursor: pointer;
+    overflow: hidden;
+    width: clamp(280px, 70vw, 820px);
+    min-height: 280px;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+.background {
+    flex: 1 1 250px;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    flex: 2 1 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    gap: 8px;
+}
+
+.content > h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.content > li {
+    font-size: clamp(1rem, 1.75vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.4;
+    list-style-type: none;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.content > li::before {
+    content: "🏫";
+    position: absolute;
+    left: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    gap: clamp(0.4rem, 2vw, 0.8rem);
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.social-icons li a svg {
+    stroke: var(--background-color);
+    width: clamp(1.6rem, 2.3vw, 2rem);
+    height: clamp(1.6rem, 2.3vw, 2rem);
+    stroke-width: 2px;
+    transition: transform 0.5s;
+}
+
+.social-icons li a:hover svg {
+    transform: rotateY(360deg);
+}

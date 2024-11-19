@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: url('lubalubu.png') no-repeat center center fixed; /* Phông nền ảnh */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Lớp phủ màu trắng nhẹ */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Tiêu đề */
+.title {
+    font-size: 2.5rem;
+    color: #005f9e;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Các nút lịch */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    background-color: #87CEEB;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #005f9e;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
